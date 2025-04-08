@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "NewTab",
+  "short_name": "NewTab",
+  "version": "1.0",
+  "description": "Changes the Firefox New Tab layout and makes it more customizeable.",
+
+  "chrome_settings_overrides": {
+    "homepage": "dist/index.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "dist/index.html"
+  },
+  "icons": {
+    "48": "icons/border-48.png"
+  }
+}
