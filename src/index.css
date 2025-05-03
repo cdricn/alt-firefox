@@ -1,11 +1,15 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: rgba(255, 255, 255, 0.87);
+  background-color: #181818;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* BOILERPLATE SETTINGS */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -25,4 +29,18 @@ body {
 img, picture, svg, video {
   display: block;
   max-width: 100%;
+}
+
+/* FONTS */
+
+@font-face{
+  font-family: "Inter";
+  src:local("Inter-VariableFont"),
+  url('./fonts/Inter-VariableFont.ttf') 
+}
+
+@font-face{
+  font-family: "InterMedium";
+  src:local("Inter-Medium"),
+  url('./fonts/Inter-Medium.ttf') 
 }

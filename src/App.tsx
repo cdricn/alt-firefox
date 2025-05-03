@@ -1,11 +1,13 @@
-import './App.sass'
-import OptionsButton from './components/options/OptionsButton'
+import './App.scss'
+import Layout from './views/Layout'
+import Options from './views/options/Options'
 
 export default function App() {
   
   return (
     <>
-      <OptionsButton />
+      <Layout />
+      <Options />
     </>
   )
 }

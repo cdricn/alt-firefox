@@ -1,0 +1,41 @@
+.icon {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+.settings-window {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  transition: .2s;
+  transform-origin: right;
+}
+
+.settings-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  color: #181818;
+}
+
+.settings-header {
+  font-size: 40px;
+  font-family: "InterMedium";
+  line-height: 100%;
+}
+
+.box {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  mix-blend-mode: difference;
+  z-index: 1;
+}

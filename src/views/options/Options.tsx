@@ -1,9 +1,8 @@
-import Options from "./Options"
-import './optionsbutton.scss'
+import './options.scss'
 import { SlSettings } from "react-icons/sl";
 import { useState } from "react";
 
-export default function OptionsButton() {
+export default function Options() {
   const [isSettingOpened, setIsSettingOpened] = useState(false);
 
   const settingsWindow = () => {
@@ -18,7 +17,17 @@ export default function OptionsButton() {
         <SlSettings />
       </div>
       <div className="settings-window" style={settingsWindow()}>
-        <Options />
+          <div className='settings-container'>
+            <div>
+              <h2 className='settings-header'>MAIN</h2>
+            </div>
+            <div>
+              <h2 className='settings-header'>WIDGETS</h2>
+            </div>
+            <div>
+              <h2 className='settings-header'>UTILITY</h2>
+            </div>
+          </div>
       </div>
     </>
   )
