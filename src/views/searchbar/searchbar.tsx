@@ -27,11 +27,24 @@ export default function SearchBar() {
   const dragMouseDown = (e:any) => {
     cursorPosX = e.clientX;
     cursorPosY = e.clientY;
+    document.onmousemove = elementDrag;
   }
 
+  function elementDrag(e:any) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    newCursorPosX = cursorPosX - e.clientX;
+    newCursorPosY = cursorPosY - e.clientY;
+    cursorPosX = e.clientX;
+    cursorPosY = e.clientY;
+    // set the element's new position:
+    e.style.top = (e.offsetTop - newCursorPosX) + "px";
+    e.style.left = (e.offsetLeft - newCursorPosY) + "px";
+  }
 
   return (
-    <div className='window-container' style={styles}>
+    <div className='window-container' style={styles} onClick={dragElement}>
       <SlCursorMove id='btn-drag' />
       <button className='search-bar'>
         <SlSocialGoogle className='search-logo'/>
